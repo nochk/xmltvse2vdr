@@ -1,4 +1,4 @@
-Source: vdr-plugin-xmltv2xmltv-grabber-xmltvse2xmltv
+Source: vdr-plugin-xmltv2vdr-grabber-xmltvse2xmltv
 Section: video
 Priority: extra
 Maintainer: nochk <nochks@yahoo.de>
@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.4
 Homepage: https://github.com/nochk/xmltvse2xmltv
 
-Package: vdr-plugin-xmltv2xmltv-grabber-xmltvse2xmltv
+Package: vdr-plugin-xmltv2vdr-grabber-xmltvse2xmltv
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, sed, grep, coreutils, curl, gzip
 Description: xmltvse2xmltv Grabber
