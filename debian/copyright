@@ -1,5 +1,5 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: vdr-plugin-xmltv2vdr-grabber-xmltvse2vdr
+Upstream-Name: vdr-plugin-xmltv2xmltv-grabber-xmltvse2xmltv
 Source: <url://example.com>
 
 Files: *

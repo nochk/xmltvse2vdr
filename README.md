@@ -1,2 +1,2 @@
-xmltvse2vdr
-===========
+xmltvse2xmltv
+=============

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIST=`cat /var/lib/epgsources/xmltvse2vdr`
+DIST=`cat /var/lib/epgsources/xmltvse2xmltv`
 args=("$@")
 for ((i=0; i < $#; i++))
 {

@@ -1,15 +1,13 @@
-Source: vdr-plugin-xmltv2vdr-grabber-xmltvse2vdr
-Section: unknown
-Priority: optional
+Source: vdr-plugin-xmltv2xmltv-grabber-xmltvse2xmltv
+Section: video
+Priority: extra
 Maintainer: nochk <nochks@yahoo.de>
 Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.4
-Homepage: <insert the upstream URL, if relevant>
-#Vcs-Git: git://git.debian.org/collab-maint/vdr-plugin-xmltv2vdr-grabber-xmltvse2vdr.git
-#Vcs-Browser: http://git.debian.org/?p=collab-maint/vdr-plugin-xmltv2vdr-grabber-xmltvse2vdr.git;a=summary
+Homepage: https://github.com/nochk/xmltvse2xmltv
 
-Package: vdr-plugin-xmltv2vdr-grabber-xmltvse2vdr
+Package: vdr-plugin-xmltv2xmltv-grabber-xmltvse2xmltv
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends: ${shlibs:Depends}, ${misc:Depends}, sed, grep, coreutils, curl, gzip
+Description: xmltvse2xmltv Grabber
+ xmltvse2xmltv Grabber for vdr-plugin-xmltv2xmltv
