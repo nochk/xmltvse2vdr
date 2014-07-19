@@ -1,5 +1,5 @@
 #!/bin/sh
-# postinst script for vdr-plugin-xmltv2vdr-grabber-tvprofilenet2vdr
+# postinst script for vdr-plugin-xmltv2vdr-grabber-xmltvse2xmltv
 #
 # see: dh_installdeb(1)
 
