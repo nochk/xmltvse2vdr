@@ -2,7 +2,6 @@
 
 DIST=`cat /var/lib/epgsources/xmltvse2vdr`
 args=("$@")
-LAST=`expr $# - 1`
 for ((i=0; i < $#; i++))
 {
 	if [ "$i" -eq "0" ]; then
@@ -23,15 +22,12 @@ for ((i=0; i < $#; i++))
 			URL=http://xmltv.xmltv.se/${CHANNEL1}_${DATE}.xml.gz
 			#echo $URL
 			PAGE=`curl "$URL" 2>/dev/null | gunzip | sed -r "s/${CHANNEL1}/${CHANNEL2}/"`
-# | sed -r "s/.\+0200//g"`
 			if [ "$i" -eq "3" -a "$j" -eq "0" ]; then
 				HEADER1=`echo "${PAGE}" | grep -Pzo '<\?xml[^<>]*>'`
-				HEADER2=`echo "${PAGE}" | grep -Pzo '<!DOCTYPE[^<>]*>'`
-				HEADER3=`echo "${PAGE}" | grep -Pzo '<tv[^<>]*>'`
+				HEADER2=`echo "${PAGE}" | grep -Pzo '<tv[^<>]*>'`
 				FOOTER="</tv>"
 				echo "$HEADER1"
-				#echo "$HEADER2"
-				echo "$HEADER3"
+				echo "$HEADER2"
 				echo "<channel id=\"${CHANNEL2}\"><display-name>${CHANNEL2}</display-name><url>http://${CHANNEL2}</url></channel>"
 			fi
 			PAGE=`echo "${PAGE}" | tail -n +2 | sed -r "N;/\n/s/<!DOCTYPE[^<>]*>//" | sed -r "N;/\n/s/<tv[^<>]*>//" | sed -r "s/<\/tv[^<>]*>//"`
